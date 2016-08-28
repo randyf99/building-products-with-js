@@ -34,7 +34,7 @@ app.post('/login', (req, res) => {
 
 // catch all unhandled errors
 app.use((err, req, res, next) => {
-  logger.error(err.stack);
+  logger.error('unhandled application error: ', err);
   res.status(500).send(err);
 });
 
