@@ -1,7 +1,5 @@
 # API
 - Users:
-  - Login
-  - Registration
   - User profile get
   - User profile update
 
@@ -12,17 +10,3 @@
   - Delete question
 
 # DB struct
-
-- User:
-  - email
-  - login
-  - password
-  - Registration date
-
-- Question:
-  - question text
-  - answers:
-    - User 
-    - Answer value
-- creation date
-- expiration date
