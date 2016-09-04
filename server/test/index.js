@@ -2,5 +2,3 @@
 require('babel-core/register');
 // require main tests
 require('./main');
-// require auth tests
-require('./auth');
