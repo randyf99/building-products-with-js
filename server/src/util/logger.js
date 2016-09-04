@@ -3,7 +3,17 @@ import winston from 'winston';
 export const logger = new winston.Logger({
   transports: [
     new winston.transports.Console({
-      level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',
+      // TODO: remove eslint disable lines once the bug is fixed
+      // bugref: https://github.com/babel/eslint-plugin-babel/issues/13
+      level: do {
+        if (process.env.NODE_ENV === 'testing') {
+          'error'; // eslint-disable-line
+        } else if (process.env.NODE_ENV === 'production') {
+          'info'; // eslint-disable-line
+        } else {
+          'debug'; // eslint-disable-line
+        }
+      },
       colorize: true,
       timestamp: true,
       prettyPrint: true,

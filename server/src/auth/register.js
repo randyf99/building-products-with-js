@@ -12,8 +12,17 @@ export default (app) => {
       return;
     }
 
+    // hash password
     const hashedPassword = hash(password);
 
+    // check if login already taken
+    const users = await User.filter({login}).run();
+    if (users.length > 0) {
+      res.status(403).send({error: 'User already exists!'});
+      return;
+    }
+
+    // save new user
     const user = new User({
       login,
       password: hashedPassword,
