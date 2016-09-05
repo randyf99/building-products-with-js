@@ -1,4 +1,6 @@
 # API
+- JWT auth
+
 - Users:
   - User profile get
   - User profile update
