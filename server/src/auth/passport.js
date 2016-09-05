@@ -21,7 +21,7 @@ passport.deserializeUser(async (id, done) => {
 });
 
 // Use local strategy
-passport.use(new LocalStrategy(async (login, password, done) => {
+passport.use(new LocalStrategy({usernameField: 'login'}, async (login, password, done) => {
   // find all users with matching login
   const users = await User.filter({login}).limit(1).run();
   // get the first match
@@ -33,10 +33,10 @@ passport.use(new LocalStrategy(async (login, password, done) => {
   }
 
   // compare password
-  if (!user.password !== hash(password)) {
+  if (user.password !== hash(password)) {
     return done(null, false);
   }
 
   // return user if successful
-  return done(null, false);
+  return done(null, user);
 }));
