@@ -22,6 +22,7 @@ export default (test) => {
        delete decodedUser.iat;
        t.equal(actualBody.user.login, 'test', 'Login matches request');
        t.deepEqual(actualBody.user, decodedUser, 'User must match token');
+       app.set('token', actualBody.token);
        t.end();
      });
   });
