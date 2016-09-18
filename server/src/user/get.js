@@ -12,7 +12,9 @@ export default (app) => {
       return;
     }
     try {
-      const user = await User.get(req.params.id);
+      const user = await User.get(req.params.id)
+      .without(['password'])
+      .execute();
       res.send(user);
     } catch (e) {
       res.status(400).send({error: 'User does not exist'});
