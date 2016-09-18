@@ -1,6 +1,5 @@
 # API
 - Users:
-  - User profile get
   - User profile update
 
 - Questions:
