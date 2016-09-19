@@ -11,6 +11,7 @@ import {logger} from './util';
 import {auth as authConfig} from '../config';
 import setupAuthRoutes from './auth';
 import setupUserRoutes from './user';
+import setupQuestionRoutes from './question';
 
 // init app
 const app = express();
@@ -42,20 +43,12 @@ app.get('/', (req, res) => {
   res.send('Hello world!');
 });
 
-// set up authentication routes
+// setup authentication routes
 setupAuthRoutes(app);
+// setup user routes
 setupUserRoutes(app);
-
-// login method
-app.post('/login', (req, res) => {
-  const {username, password} = req.body;
-  if (username === 'test' && password === '123') {
-    res.send({username, id: 1});
-    return;
-  }
-
-  res.status(401).send({error: 'Incorrect username or password'});
-});
+// setup question routes
+setupQuestionRoutes(app);
 
 // catch all unhandled errors
 app.use((err, req, res, next) => {

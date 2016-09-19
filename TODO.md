@@ -1,6 +1,4 @@
 # API
-- Users:
-  - User profile update
 
 - Questions:
   - Create question
