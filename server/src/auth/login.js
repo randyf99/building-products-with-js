@@ -1,8 +1,8 @@
-// npm packeges
+// npm packages
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
 
-// Our packages
+// our packages
 import {auth as authConfig} from '../../config';
 
 export default (app) => {

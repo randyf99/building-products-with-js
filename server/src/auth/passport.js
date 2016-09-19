@@ -24,7 +24,7 @@ passport.deserializeUser(async (id, done) => {
   done(null, user);
 });
 
-// Use local strategy
+// use LocalStrategy
 passport.use(new LocalStrategy({usernameField: 'login'}, async (login, password, done) => {
   // find all users with matching login
   let users = [];
@@ -35,23 +35,20 @@ passport.use(new LocalStrategy({usernameField: 'login'}, async (login, password,
   }
   // get the first match
   const user = users[0];
-
   // check if exists
   if (!user) {
     return done(null, false);
   }
-
   // compare password
   if (user.password !== hash(password)) {
     return done(null, false);
   }
-
   // return user if successful
   delete user.password;
   return done(null, user);
 }));
 
-// Use JWT Strategy
+// use JWTStrategy
 const jwtOpts = {
   jwtFromRequest: ExtractJwt.fromHeader('x-access-token'),
   secretOrKey: authConfig.jwtSecret,
@@ -69,7 +66,6 @@ passport.use(new JwtStrategy(jwtOpts, async (payload, done) => {
   if (!user) {
     return done(null, false);
   }
-
   // return user if successful
   return done(null, user);
 }));

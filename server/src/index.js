@@ -3,7 +3,7 @@ import app from './app';
 import {logger} from './util';
 import {thinky} from './db';
 
-// Wait for DB to initialize
+// wait for DB to initialize
 thinky.dbReady().then(() => {
   logger.info('Database ready, starting server...');
   // start server
