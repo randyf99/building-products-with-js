@@ -18,6 +18,10 @@
   ],
   "author": "Randy Ferrer",
   "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "git-https://github.com/randyf99/building-products-with-js.git"
+    },
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
