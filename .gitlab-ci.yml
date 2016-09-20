@@ -8,8 +8,8 @@ stages:
 - release
 
 variables:
-  SERVER_TEST_IMAGE: randf/bpws-server:$CI_BUILD_REF_NAME
-  SERVER_RELEASE_IMAGE: randf/bpws-server:latest
+  SERVER_TEST_IMAGE: randf/bpwjs-server:$CI_BUILD_REF_NAME
+  SERVER_RELEASE_IMAGE: randf/bpwjs-server:latest
 
 before_script:
   - docker login -u randf -p $CI_DOCKERHUB_PASSWORD
