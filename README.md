@@ -7,7 +7,7 @@ This repository contains code and related materials for [Building products with 
 ##From tutorial by Tim Ermilov 
 
 Check out Tim's awesome tutorial at the following links:
-[YouTube channel](https://www.youtube.com/c/TimErmilov) with videos covering code
+- [YouTube channel](https://www.youtube.com/c/TimErmilov) with videos covering code
 - [Gitter chat](https://gitter.im/yamalight/building-products-with-js) for live discussions
 - [Subreddit](https://www.reddit.com/r/BuildingWithJS/) for discussions
 - [Facebook page](https://www.facebook.com/buildingproductswithjs/) with updates on progress
