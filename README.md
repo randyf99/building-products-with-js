@@ -4,7 +4,7 @@
 
 This repository contains code and related materials for [Building products with javascript]
 
-##From tutorial by Tim Ermilov. 
+##From tutorial by Tim Ermilov 
 
 Check out Tim's awesome tutorial at the following links:
 [YouTube channel](https://www.youtube.com/c/TimErmilov) with videos covering code
