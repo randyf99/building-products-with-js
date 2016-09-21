@@ -11,7 +11,7 @@ Check out Tim's awesome tutorial at the following links:
 - [Gitter chat](https://gitter.im/yamalight/building-products-with-js) for live discussions
 - [Subreddit](https://www.reddit.com/r/BuildingWithJS/) for discussions
 - [Facebook page](https://www.facebook.com/buildingproductswithjs/) with updates on progress
-- [My twitter](https://twitter.com/yamalight) with updates on progress (and other stuff) 
+- [Tim's twitter](https://twitter.com/yamalight) with updates on progress (and other stuff) 
 
 CI and CD for all the sub projects is done using [Gitlab-CI](https://gitlab.com/randyf991/building-products-with-js).
 
