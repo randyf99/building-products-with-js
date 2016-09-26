@@ -1,4 +1,4 @@
-FROM node
+FROM node:6.5
 
 # Create app folder
 RUN mkdir -p /app
