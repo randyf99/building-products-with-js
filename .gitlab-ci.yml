@@ -1,4 +1,4 @@
-image: docker:6.5.0
+image: docker:latest
 services:
 - docker:dind
 
